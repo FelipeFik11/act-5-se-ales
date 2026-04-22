@@ -7,10 +7,11 @@ func count_new_instance():
 	instancesCount += 1
 	$CountLabel.text = "cantidad de instancias : " + str(instancesCount)
 func _ready():
-	# Inicializa el texto de "CountLabel" usando el texto
-	# Constante "INSTANCES_TEXT" más el valor de "instancesCount" como Texto
-	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
-	pass
+	var red = get_node("../RedGenerator")
+	var violet = get_node("../VioletGenerator")
+	
+	red.button_down.connect(count_new_instance)
+	violet.button_down.connect(count_new_instance)
 
 
 func button_down() -> void:
