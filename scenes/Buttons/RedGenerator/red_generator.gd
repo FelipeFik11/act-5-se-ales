@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func button_down() -> void:
-	pass # Replace with function body.
+func button_down():
+	generate_block()

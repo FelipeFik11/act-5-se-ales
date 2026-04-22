@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func button_down() -> void:
-	pass # Replace with function body.
+func button_down():
+	get_tree().call_group("blocks" , "delete")

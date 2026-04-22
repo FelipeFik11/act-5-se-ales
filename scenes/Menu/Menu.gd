@@ -3,7 +3,9 @@ extends Node2D
 const INSTANCES_TEXT = "Cantidad de instancias: "
 # Variable para contar cantidad de instancias
 var instancesCount = 0
-
+func count_new_instance():
+	instancesCount += 1
+	$CountLabel.text = "cantidad de instancias : " + str(instancesCount)
 func _ready():
 	# Inicializa el texto de "CountLabel" usando el texto
 	# Constante "INSTANCES_TEXT" más el valor de "instancesCount" como Texto
