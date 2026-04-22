@@ -13,6 +13,8 @@ func _ready():
 	red.button_down.connect(count_new_instance)
 	violet.button_down.connect(count_new_instance)
 
-
+func delete():
+	instancesCount = 0
+	$CountLabel.text = "cantidad de instancias : 0"
 func button_down() -> void:
 	pass # Replace with function body.
